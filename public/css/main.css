@@ -1,0 +1,845 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url(../assets/Uni_Sans_Thin.otf);
+}
+@font-face {
+	font-family: mySecondFont;
+	src: url(../assets/Poppins-Light.otf);
+}
+  
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+	overflow: hidden;
+	margin: 0;
+	background: radial-gradient(rgb(177, 177, 174) 5%, rgb(82, 82, 83) 85% );
+}
+
+.starting_scene{
+	background-image: url("../assets/img/1.jpg");
+	height: 100%;
+	width:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top:0;
+	z-index:100;
+	/* Add the blur effect */
+	 /* filter: blur(5px);
+ 	-webkit-filter: blur(5px); */
+}
+
+#powerby{
+	position: absolute;
+	z-index:30;
+	right:20px;
+	bottom:30px;
+	font-family: sans-serif;
+	font-size: medium;
+}
+
+.switch_panel{
+	z-index: 30;
+	position:absolute;
+	top:100px;
+	left:30px;
+	/* display: flex; */
+	align-items: center;	
+}
+#switch_mode{
+	display: flex;
+	/* margin:auto; */
+	/* margin-left:30px; */
+	align-items: center;
+}
+#test{
+	font-family: myFirstFont;
+	font-size: 20px;
+	color:orange;
+}	
+#train{
+	font-family: myFirstFont;
+	font-size: 20px;
+	
+}
+#starting_image{
+	margin-top:20vh;
+}
+#popup{
+	position: absolute;
+	z-index:30;
+	left:30px;
+	top:45vh;
+	cursor: pointer;
+}
+#popup_image {
+	position:absolute;
+	z-index:30;
+	left:10px;
+	top:40vh;
+	
+	display:none;
+
+}
+#popup_image img{
+	width:300px;
+	/* height:100px; */
+}
+#popup img{
+	width:150px;
+	
+}
+#logo_title{
+	position:absolute;
+	z-index:100;
+	height:100%;
+	width:100%;
+	top:0;
+}
+#logo_div{
+	display:flex;
+	align-items:center;
+	
+}
+#logo{
+	width:15vw;
+	height: 14vw;
+	position:relative;
+	margin:auto;
+	
+}
+#title_div{
+	display:flex;
+	align-items: center;
+	margin-top:20px;
+	
+}
+.threed{
+	font-family: mySecondFont;
+	font-size: 50px;
+	font-weight: bold; 
+		text-shadow: 7px 4px 7px rgba(0,0,0,0.5);
+	
+	color: rgb(245 130 32);
+	margin-top: 20px;
+}
+.underline{	
+	font-family: mySecondFont;
+	border-bottom: 3px solid rgb(245 130 32);	
+	margin-left:10px;
+	font-size: 25px; 
+	box-shadow: 0px 3px 1px #30303025;
+
+}
+#loading_percent{
+	font-family: myFirstFont;
+}
+#interactive_animation{
+	margin-top:80px;
+}
+#tta_jump{
+	margin-top:40px;
+	font-size:30px;
+}
+.message{
+	display: none;
+	border-radius: 15px;
+	background-color: white;
+	margin: auto;
+	justify-content: center;
+	position: absolute;
+	z-index: 30;
+	top:70vh;
+	left:42.5vw;
+	color:black;
+	font-size:20px;
+	width:15vw;
+	padding:20px;
+	font-family:mySecondFont;
+}
+#train_message{
+	display: none;
+	border-radius: 15px;
+	background-color: white;
+	margin: auto;
+	justify-content: center;
+	position: absolute;
+	z-index: 30;
+	top:70vh;
+	width:25vw;
+	left:37.5vw;
+	padding:20px;
+	color:black;
+	font-size:20px;
+	/* font-family: sans-serif; */
+	font-family: mySecondFont;
+
+}
+#small_title{
+	font-family:-webkit-pictograph;
+
+	text-transform:lowercase !important;
+	/* text-shadow: 0px 5px 8px rgba(0,0,0,0.5),
+	0px 5px 5px rgba(0,0,0,0.5),
+	0px 5px 5px rgba(0,0,0,0.5); */
+}
+.progress {
+	background: rgba(255,255,255,0.1);
+	
+	justify-content: flex-start;
+	border-radius: 100px;
+	align-items: center;
+	position: relative;
+  /*  padding: 0 5px;*/
+	
+	height: 5px;
+	width: 20%;
+  }
+  
+  .progress-value {
+	 /* animation: load 3s normal forwards;  */
+	box-shadow: 1px 1px 17px 3px #fff;
+	border-radius: 100px;
+	background: #2cbfdb;
+	height: 5px;
+
+  }
+#s_title{
+	font-family: sans-serif;
+	margin:auto;
+	/* text-shadow: 0px 5px 8px rgba(0,0,0,0.5),
+                 0px 5px 5px rgba(0,0,0,0.5),
+				 0px 5px 5px rgba(0,0,0,0.5); */
+}
+
+
+
+  #canvas{
+	  z-index:70;
+  } 
+
+canvas:focus {
+	outline: none;
+  }
+#play{
+	position: absolute;
+	bottom:200px;
+}
+#bottomLine{
+	
+	position: absolute;
+	 bottom: 30px;
+	  left: 0; 
+	  width: 100%;
+	
+}
+#bottom_logo{
+	position:absolute;
+	z-index:20;
+	bottom:30px;
+	width: 70px;
+	left:30px;
+}
+  #playPausePanel{
+	  
+	display:inline-flex;
+	align-items: center;
+
+  }
+  
+  
+hr{
+    margin-top:0px;
+    margin-bottom:0px;
+  border:1px solid white;
+}
+.closeLeft{
+	position:absolute;
+	top: 10px;
+	right:15px;
+font-size: medium;
+padding:5px;
+
+}
+.closeLeft:hover{
+color:#6d7fcc;
+background:white;
+}
+
+
+
+#surgeryName{
+	font-size: 25px;
+	font-weight: 500;
+	font-family: "Arial";
+	position: absolute;
+	top:25px;
+	left:30px;
+	text-shadow: 0px 5px 8px rgba(0,0,0,0.2),
+                 0px 5px 5px rgba(0,0,0,0.2),
+				 0px 5px 5px rgba(0,0,0,0.2);
+/* word-spacing:-6px; */
+
+display: block;
+z-index: 30;
+}
+
+#first_title{
+	font-size: 35px;;
+}
+#second_title{
+	margin-top:10px;
+		}
+.buttonList{
+	position:absolute;
+	z-index:20;
+	top:100px;
+	right:10px;
+	display: none;
+
+}
+.arrow:hover{
+	color:black;
+}
+#pdf_section{
+	position: fixed;
+	z-index:30;
+	width:70vw;
+	height:70vh;
+	top:calc(50% - 35vh);
+	right: calc(50% - 30vw);
+	align-items: center;
+	display: none;
+}
+#pdf_content{
+	width:75vw;
+	height:70vh;
+}
+#open_pdf{
+	font-size:25px;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+#open_pdf:hover{
+	color:rgba(11, 11, 202, 0.726);
+	
+}
+.close_pdf{
+	z-index:21;
+	position: absolute;
+	cursor: pointer;
+	right:calc(50% - 40.5vw);
+	top:-12px;
+	border:none;
+	border-radius: 50%;
+	/* background-color: white; */
+	color:white;
+	font-size:25px;
+}
+.close_pdf:hover{
+	color:rgb(21, 191, 243);
+	
+}
+#mobile_tool{
+	max-width: 350px;
+	margin: auto;
+	position:absolute;
+	bottom:5px;
+	z-index: 30;
+	display:none;
+
+}
+
+#annotation_panel{
+	width:30vw;
+	position:absolute;
+	z-index: 30;
+	top:250px;
+	left:30px;
+	background-color: white;
+	border-radius:5px;
+	color:black;
+	padding:10px;
+	display: none;
+}
+#annotation_text{
+	font-size:18px;
+}
+#exclamation{
+	width: 27px;
+	height:54px
+}
+#manual_text{
+	margin-left:10px;
+	font-family: myFirstFont;
+	font-size:18px;
+	cursor:pointer;
+}
+#manual_text:hover{
+	color:rgb(155, 219, 6)
+}
+.normalButton{
+	margin-top:10px;
+	width:270px;
+	justify-content: start;
+	display: flex;
+	
+	background:rgb(80, 122, 218);
+	color:white;
+	border:  solid white 1px
+}
+.normalButton:hover{
+	color:white;
+	background: rgb(35, 47, 58);
+}
+.normalButton:focus{
+	box-shadow:1px 1px 20px white;  
+
+}
+#playPause:hover{
+	color:rgb(2, 8, 24)
+}
+.guideTag{
+	font-size:16px;
+}
+
+
+
+
+#foglayer_01, #foglayer_02, #foglayer_03 {
+	height: 100%;
+	position: absolute;
+	width: 200%;
+	z-index:-1;
+  }
+  #foglayer_01 .image01, #foglayer_01 .image02,
+  #foglayer_02 .image01, #foglayer_02 .image02,
+  #foglayer_03 .image01, #foglayer_03 .image02 {
+	float: left;
+	height: 100%;
+	width: 50%;
+
+  }
+  #foglayer_01 {
+	-webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+	-moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+	animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  }
+  #foglayer_02, #foglayer_03 {
+	-webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+	-moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+	animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  }
+  
+  #foglayer_01 .image01, #foglayer_01 .image02 {
+	background: url("../assets/img/fog1.png") center center/cover no-repeat transparent;
+  }
+  #foglayer_02 .image01, #foglayer_02 .image02,
+  #foglayer_03 .image01, #foglayer_03 .image02{
+	background: url("../assets/img/fog2.png") center center/cover no-repeat transparent;
+  }
+
+  /* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+	0% { opacity: .1; }
+	22% { opacity: .5; }
+	40% { opacity: .28; }
+	58% { opacity: .4; }
+	80% { opacity: .16; }
+	100% { opacity: .1; }
+  }
+  @-moz-keyframes foglayer_01_opacity {
+	0% { opacity: .1; }
+	22% { opacity: .5; }
+	40% { opacity: .28; }
+	58% { opacity: .4; }
+	80% { opacity: .16; }
+	100% { opacity: .1; }
+  }
+  @-o-keyframes foglayer_01_opacity {
+	0% { opacity: .1; }
+	22% { opacity: .5; }
+	40% { opacity: .28; }
+	58% { opacity: .4; }
+	80% { opacity: .16; }
+	100% { opacity: .1; }
+  }
+  @keyframes foglayer_01_opacity {
+	0% { opacity: .1; }
+	22% { opacity: .5; }
+	40% { opacity: .28; }
+	58% { opacity: .4; }
+	80% { opacity: .16; }
+	100% { opacity: .1; }
+  }
+  /* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+	0% { opacity: .5; }
+	25% { opacity: .2; }
+	50% { opacity: .1; }
+	80% { opacity: .3; }
+	100% { opacity: .5; }
+  }
+  @-moz-keyframes foglayer_02_opacity {
+	0% { opacity: .5; }
+	25% { opacity: .2; }
+	50% { opacity: .1; }
+	80% { opacity: .3; }
+	100% { opacity: .5; }
+  }
+  @-o-keyframes foglayer_02_opacity {
+	0% { opacity: .5; }
+	25% { opacity: .2; }
+	50% { opacity: .1; }
+	80% { opacity: .3; }
+	100% { opacity: .5; }
+  }
+  @keyframes foglayer_02_opacity {
+	0% { opacity: .5; }
+	25% { opacity: .2; }
+	50% { opacity: .1; }
+	80% { opacity: .3; }
+	100% { opacity: .5; }
+  }
+.tool{
+	
+	background-size:cover;
+	width:80px ;
+	height:60px;
+	margin-top:15px;
+}
+
+.mobileTool{
+height: 60px;
+width:80px;
+}
+#manual_panel{
+	display: flex;
+	 align-items: center;
+	  margin-top:10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	#s_title{
+		/* font-size:4em; */
+		text-align: center;
+			}
+	#logo{
+		width:40vw;
+		height:25vh;
+	}
+	#mobile_tool{
+		display: none;
+		}
+}
+
+@media only screen and (max-width: 992px) {
+	#rotate, #panning, #zooming{
+		margin-left:5px;
+	}
+	.slider.slider-horizontal {
+		width:70vw;
+	}	
+}
+@media only screen and (max-width: 823px){
+	.buttonList{
+		display: none!important;
+	}
+	#mobile_tool{
+	display: none;
+	}
+	
+}
+@media only screen and (max-width: 768px) {
+	#logo{
+		width:40vw;
+		height:25vh;
+	}
+
+	#bottom_logo{
+		top:20px;
+		right:15px  ;
+		left:unset;
+	}
+	#surgeryName{
+		font-size: 25px;
+		font-weight: 300;
+	}
+	.slider.slider-horizontal {
+		width: 90vw;
+	}
+	#test, #train{
+		font-size: 18px;
+	}
+	.switch_panel{
+		left:30px ;
+		top:95px;
+	}
+	#manual_panel{
+		margin-top:5px;
+	}
+	#open_pdf{
+		width:30px;
+		height:30px;
+	}
+	#manual_text{
+		font-size: 18px;
+	}
+	
+	#mobile_tool{
+	
+		max-width: 760px;
+		bottom:15px;
+	}
+	#annotation_panel{
+		width:50vw;	
+	}
+	.message{
+		width:35vw;
+		left:32.5vw;
+	}
+	#train_message{
+		width:50vw;
+		left:25vw;
+	}
+	#popup{
+		left:86vw;
+		top:85px;
+	}
+	#popup img{
+		width:100px;
+	}
+		
+}
+
+@media only screen and (max-width: 736px) {
+	
+	#mobile_tool{
+		max-width: 730px;
+		bottom:5px;
+		
+	}
+	#interactive_animation{
+		margin-top: 40px;
+	}
+	#tta_jump{
+		margin-top:22px;
+		font-size:25px;
+	}
+	.threed{
+		font-size:35px;
+	}
+	.underline{
+		font-size:25px;
+	}
+	.message{
+		width:60vw;
+		left:20vw;
+		padding:10px;
+		top:60vh;
+	}
+	#train_message{
+		width:60vw;
+		left:20vw;
+		top:58vh;
+		font-size:15px;
+	}
+		
+}
+
+@media only screen and (max-width: 667px) {
+	
+	#mobile_tool{
+		max-width: 660px;
+		
+		
+	}
+		
+}
+@media only screen and (max-width: 640px) {
+	
+	#surgeryName{
+		font-size: 20px;
+		
+	}
+	
+
+	
+}
+@media only screen and (max-width: 568px)
+{
+	#mobile_tool{
+		max-width:560px;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+
+	#mobile_tool{
+		max-width: 400px;
+	}
+	#s_title{
+		font-size:2em;
+		text-align: center;
+	}
+	
+	#logo{
+		width:40vw;
+		height:20vh;
+	}
+	#bottom_logo{
+		width:50px;
+		top:5px;
+	}
+	#surgeryName{
+		font-size: 15px;
+		top:10px;
+		left:20px;
+	}
+	#first_title{
+		font-size:22px;
+		font-weight: 500;
+	}
+	#second_title{
+		margin-top: 0px;
+	}
+	#test, #train{
+		font-size: 12px;
+	}
+	#manual_text{
+		font-size: 12px;
+	}
+	
+	#manual_panel{
+		margin-top:0px;
+	}
+	#open_pdf{
+		width:30px;
+		height:30px;
+	}
+	.switch_panel{
+		left:20px;
+		top:60px;
+	}
+	#annotation_panel{
+		width:85vw;	
+	}
+	#popup{
+		top:48px;
+		left:80vw;
+	}
+	#popup img{
+		width:70px;
+		
+	}
+	
+		
+}
+@media only screen and (max-width: 375px) {
+#mobile_tool{
+	max-width:370px;
+}
+.message{
+	font-size:18px;
+}
+#surgeryName{
+	font-size: 15px;
+	font-weight: 300;
+	left:20px;
+	top:10px;
+}
+#first_title{
+	font-size:18px;
+}
+#second_title{
+	margin-top:2px;
+}
+#popup{
+	top:50px;
+	left:80vw;
+}
+#popup img{
+	width:70px;
+	
+}
+}
+
+@media only screen and (max-width: 360px) {
+	#surgeryName{
+		font-size: 15px;
+		font-weight: 300;
+		left:20px;
+		top:10px;
+	}
+	#first_title{
+		font-size:18px;
+	}
+	#second_title{
+		margin-top:2px;
+	}
+	#test, #train{
+		font-size: 12px;
+	}
+	.switch_panel{
+		top:60px;
+		left:20px ;
+	}
+	#manual_panel{
+		margin-top:0px;
+	}
+	#open_pdf{
+		width:30px;
+		height:30px;
+	}
+	#manual_text{
+		font-size: 13px;
+	}
+	#s_title{
+	font-size:2em;
+	text-align: center;
+	}
+	#logo{
+		width:50vw;
+		height:25vh;
+	}
+	#bottom_logo{
+		width:40px;
+	}
+	#mobile_tool{
+		max-width: 350px;
+	}
+	#annotation_panel{
+		width:85vw;	
+	}
+	#interactive_animation{
+		margin-top: 40px;
+	}
+	#tta_jump{
+		margin-top:22px;
+		font-size:25px;
+	}
+	.threed{
+		font-size:35px;
+	}
+	.underline{
+		font-size:25px;
+	}
+	.message{
+		font-size:18px;
+	}
+	#popup{
+		top:45px;
+		right:5px;
+	}
+	#popup img{
+		width:70px;
+		
+	}
+}
